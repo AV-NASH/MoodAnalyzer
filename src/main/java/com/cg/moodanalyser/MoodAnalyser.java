@@ -14,8 +14,13 @@ public class MoodAnalyser {
         System.out.println("Welcome to mood analyzer program\n");
     }
     public String analyzeMood() {
+        try{
         if(message.contains("Sad"))
             return "SAD";
         else return "HAPPY";
+        } catch (NullPointerException e) {
+            return "HAPPY";
+        }
+
     }
 }
